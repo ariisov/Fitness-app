@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E41768727E615FF0098047D /* PushUpsDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E41768627E615FF0098047D /* PushUpsDataManager.swift */; };
+		9E41768927E61C8D0098047D /* SitUpsDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E41768827E61C8D0098047D /* SitUpsDataManager.swift */; };
+		9E74ADF328074F560085C939 /* CircularView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E74ADF228074F560085C939 /* CircularView.swift */; };
 		9E8D482127D79CA50098C813 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8D482027D79CA50098C813 /* AppDelegate.swift */; };
 		9E8D482327D79CA50098C813 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8D482227D79CA50098C813 /* SceneDelegate.swift */; };
 		9E8D482527D79CA50098C813 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8D482427D79CA50098C813 /* ViewController.swift */; };
@@ -14,9 +17,26 @@
 		9E8D482B27D79CA50098C813 /* FitnessApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9E8D482927D79CA50098C813 /* FitnessApp.xcdatamodeld */; };
 		9E8D482D27D79CA60098C813 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E8D482C27D79CA60098C813 /* Assets.xcassets */; };
 		9E8D483027D79CA60098C813 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E8D482E27D79CA60098C813 /* LaunchScreen.storyboard */; };
+		9E997551281EAD0D00E4F63B /* SquatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E997550281EAD0D00E4F63B /* SquatsViewController.swift */; };
+		9E997553281EAD3000E4F63B /* SquatsPrepareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E997552281EAD3000E4F63B /* SquatsPrepareViewController.swift */; };
+		9E997556281EADA400E4F63B /* SquatsDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E997555281EADA400E4F63B /* SquatsDataManager.swift */; };
+		9E997558281EADC200E4F63B /* PullUpsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E997557281EADC200E4F63B /* PullUpsViewController.swift */; };
+		9E99755A281EADDF00E4F63B /* PullUpsPrepareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E997559281EADDF00E4F63B /* PullUpsPrepareViewController.swift */; };
+		9E99755C281EADF300E4F63B /* PullUpsDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E99755B281EADF300E4F63B /* PullUpsDataManager.swift */; };
+		9EB6422427F5F6C7007654B8 /* RunViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB6422327F5F6C7007654B8 /* RunViewController.swift */; };
+		9EB6422627F5F6EC007654B8 /* RunPrepareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB6422527F5F6EC007654B8 /* RunPrepareViewController.swift */; };
+		9EB6422827F5F701007654B8 /* RunDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB6422727F5F701007654B8 /* RunDataManager.swift */; };
+		9ED54F2827E4A5990077057E /* PushUpsPrepareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED54F2727E4A5990077057E /* PushUpsPrepareViewController.swift */; };
+		9ED54F2C27E4A64A0077057E /* PushUpsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED54F2B27E4A64A0077057E /* PushUpsViewController.swift */; };
+		9ED54F2E27E4A6AC0077057E /* SitUpsPrepareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED54F2D27E4A6AC0077057E /* SitUpsPrepareViewController.swift */; };
+		9ED54F3027E4A6DF0077057E /* SitUpsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED54F2F27E4A6DF0077057E /* SitUpsViewController.swift */; };
+		9EE4007E27E38817001D161F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE4007D27E38817001D161F /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9E41768627E615FF0098047D /* PushUpsDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushUpsDataManager.swift; sourceTree = "<group>"; };
+		9E41768827E61C8D0098047D /* SitUpsDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitUpsDataManager.swift; sourceTree = "<group>"; };
+		9E74ADF228074F560085C939 /* CircularView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularView.swift; sourceTree = "<group>"; };
 		9E8D481D27D79CA50098C813 /* FitnessApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitnessApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E8D482027D79CA50098C813 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9E8D482227D79CA50098C813 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +46,20 @@
 		9E8D482C27D79CA60098C813 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9E8D482F27D79CA60098C813 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9E8D483127D79CA60098C813 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9E997550281EAD0D00E4F63B /* SquatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquatsViewController.swift; sourceTree = "<group>"; };
+		9E997552281EAD3000E4F63B /* SquatsPrepareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquatsPrepareViewController.swift; sourceTree = "<group>"; };
+		9E997555281EADA400E4F63B /* SquatsDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquatsDataManager.swift; sourceTree = "<group>"; };
+		9E997557281EADC200E4F63B /* PullUpsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullUpsViewController.swift; sourceTree = "<group>"; };
+		9E997559281EADDF00E4F63B /* PullUpsPrepareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullUpsPrepareViewController.swift; sourceTree = "<group>"; };
+		9E99755B281EADF300E4F63B /* PullUpsDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullUpsDataManager.swift; sourceTree = "<group>"; };
+		9EB6422327F5F6C7007654B8 /* RunViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunViewController.swift; sourceTree = "<group>"; };
+		9EB6422527F5F6EC007654B8 /* RunPrepareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunPrepareViewController.swift; sourceTree = "<group>"; };
+		9EB6422727F5F701007654B8 /* RunDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunDataManager.swift; sourceTree = "<group>"; };
+		9ED54F2727E4A5990077057E /* PushUpsPrepareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushUpsPrepareViewController.swift; sourceTree = "<group>"; };
+		9ED54F2B27E4A64A0077057E /* PushUpsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushUpsViewController.swift; sourceTree = "<group>"; };
+		9ED54F2D27E4A6AC0077057E /* SitUpsPrepareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitUpsPrepareViewController.swift; sourceTree = "<group>"; };
+		9ED54F2F27E4A6DF0077057E /* SitUpsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitUpsViewController.swift; sourceTree = "<group>"; };
+		9EE4007D27E38817001D161F /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +73,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9E41768227E612920098047D /* PushUps */ = {
+			isa = PBXGroup;
+			children = (
+				9E41768627E615FF0098047D /* PushUpsDataManager.swift */,
+				9ED54F2727E4A5990077057E /* PushUpsPrepareViewController.swift */,
+				9ED54F2B27E4A64A0077057E /* PushUpsViewController.swift */,
+			);
+			path = PushUps;
+			sourceTree = "<group>";
+		};
+		9E41768327E612A40098047D /* SitUps */ = {
+			isa = PBXGroup;
+			children = (
+				9E41768827E61C8D0098047D /* SitUpsDataManager.swift */,
+				9ED54F2D27E4A6AC0077057E /* SitUpsPrepareViewController.swift */,
+				9ED54F2F27E4A6DF0077057E /* SitUpsViewController.swift */,
+			);
+			path = SitUps;
+			sourceTree = "<group>";
+		};
 		9E8D481427D79CA50098C813 = {
 			isa = PBXGroup;
 			children = (
@@ -46,6 +100,7 @@
 				9E8D481E27D79CA50098C813 /* Products */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 0;
 		};
 		9E8D481E27D79CA50098C813 /* Products */ = {
 			isa = PBXGroup;
@@ -61,6 +116,13 @@
 				9E8D482027D79CA50098C813 /* AppDelegate.swift */,
 				9E8D482227D79CA50098C813 /* SceneDelegate.swift */,
 				9E8D482427D79CA50098C813 /* ViewController.swift */,
+				9E74ADF228074F560085C939 /* CircularView.swift */,
+				9EE4007D27E38817001D161F /* MainViewController.swift */,
+				9E41768227E612920098047D /* PushUps */,
+				9E41768327E612A40098047D /* SitUps */,
+				9E997554281EAD4C00E4F63B /* Squats */,
+				9E99755E281EAE2900E4F63B /* PullUps */,
+				9EB6422A27F5F71F007654B8 /* Run */,
 				9E8D482627D79CA50098C813 /* Main.storyboard */,
 				9E8D482C27D79CA60098C813 /* Assets.xcassets */,
 				9E8D482E27D79CA60098C813 /* LaunchScreen.storyboard */,
@@ -68,6 +130,36 @@
 				9E8D482927D79CA50098C813 /* FitnessApp.xcdatamodeld */,
 			);
 			path = FitnessApp;
+			sourceTree = "<group>";
+		};
+		9E997554281EAD4C00E4F63B /* Squats */ = {
+			isa = PBXGroup;
+			children = (
+				9E997555281EADA400E4F63B /* SquatsDataManager.swift */,
+				9E997552281EAD3000E4F63B /* SquatsPrepareViewController.swift */,
+				9E997550281EAD0D00E4F63B /* SquatsViewController.swift */,
+			);
+			path = Squats;
+			sourceTree = "<group>";
+		};
+		9E99755E281EAE2900E4F63B /* PullUps */ = {
+			isa = PBXGroup;
+			children = (
+				9E99755B281EADF300E4F63B /* PullUpsDataManager.swift */,
+				9E997559281EADDF00E4F63B /* PullUpsPrepareViewController.swift */,
+				9E997557281EADC200E4F63B /* PullUpsViewController.swift */,
+			);
+			path = PullUps;
+			sourceTree = "<group>";
+		};
+		9EB6422A27F5F71F007654B8 /* Run */ = {
+			isa = PBXGroup;
+			children = (
+				9EB6422727F5F701007654B8 /* RunDataManager.swift */,
+				9EB6422527F5F6EC007654B8 /* RunPrepareViewController.swift */,
+				9EB6422327F5F6C7007654B8 /* RunViewController.swift */,
+			);
+			path = Run;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,10 +233,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E74ADF328074F560085C939 /* CircularView.swift in Sources */,
 				9E8D482B27D79CA50098C813 /* FitnessApp.xcdatamodeld in Sources */,
+				9EB6422827F5F701007654B8 /* RunDataManager.swift in Sources */,
+				9ED54F3027E4A6DF0077057E /* SitUpsViewController.swift in Sources */,
+				9E99755A281EADDF00E4F63B /* PullUpsPrepareViewController.swift in Sources */,
+				9E99755C281EADF300E4F63B /* PullUpsDataManager.swift in Sources */,
+				9E997556281EADA400E4F63B /* SquatsDataManager.swift in Sources */,
 				9E8D482527D79CA50098C813 /* ViewController.swift in Sources */,
+				9E997551281EAD0D00E4F63B /* SquatsViewController.swift in Sources */,
+				9E41768927E61C8D0098047D /* SitUpsDataManager.swift in Sources */,
 				9E8D482127D79CA50098C813 /* AppDelegate.swift in Sources */,
+				9E41768727E615FF0098047D /* PushUpsDataManager.swift in Sources */,
+				9E997553281EAD3000E4F63B /* SquatsPrepareViewController.swift in Sources */,
+				9ED54F2827E4A5990077057E /* PushUpsPrepareViewController.swift in Sources */,
+				9ED54F2C27E4A64A0077057E /* PushUpsViewController.swift in Sources */,
+				9E997558281EADC200E4F63B /* PullUpsViewController.swift in Sources */,
+				9EB6422627F5F6EC007654B8 /* RunPrepareViewController.swift in Sources */,
 				9E8D482327D79CA50098C813 /* SceneDelegate.swift in Sources */,
+				9ED54F2E27E4A6AC0077057E /* SitUpsPrepareViewController.swift in Sources */,
+				9EB6422427F5F6C7007654B8 /* RunViewController.swift in Sources */,
+				9EE4007E27E38817001D161F /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,8 +408,10 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -310,7 +421,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -327,8 +438,10 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -338,7 +451,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
