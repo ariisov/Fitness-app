@@ -2,7 +2,7 @@ import UIKit
 class PushUpsViewController: UIViewController {
 
     @IBOutlet weak var pushUpsShowButton: UIButton!
-    @IBOutlet weak var finishPUButton: UIButton!
+    @IBOutlet weak var finishPushUpsButton: UIButton!
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var counterLabel: UILabel!
     private var timer = Timer()
@@ -13,6 +13,8 @@ class PushUpsViewController: UIViewController {
     // MARK: View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        finishPushUpsButton.layer.cornerRadius = 5.0
         counterLabel?.text = "0"
     }
 

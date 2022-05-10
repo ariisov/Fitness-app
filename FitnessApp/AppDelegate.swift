@@ -7,21 +7,83 @@
 
 import UIKit
 import CoreData
+import Firebase
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
     var navigationController = UINavigationController()
     
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        
+//        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+//
+//        let authViewController = storyboard.instantiateViewController(withIdentifier: "AuthViewController") as! AuthViewController
+//
+//        self.navigationController = UINavigationController(rootViewController: authViewController)
+//
+//
+//        self.window?.rootViewController?.present(authViewController, animated: false, completion: nil)
+//
+//
+//        self.window = UIWindow(frame: UIScreen.main.bounds)
+//
+//
+//        self.window!.makeKeyAndVisible()
+//
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//
+//
+//        let main = storyboard.instantiateViewController(withIdentifier: "mainViewController") as! MainViewController
+////        self.navigationController = UINavigationController(rootViewController: main)
+//
+//
+//        FirebaseApp.configure()
+//        Auth.auth().addStateDidChangeListener { auth, user in
+//            if (user != nil) {
+//                print("In auth")
+//                self.navigationController = UINavigationController(rootViewController: main)
+//                print("In auth 2")
+//            }
+//            else{
+//                self.navigationController = UINavigationController(rootViewController: main)
+//            }
+//        }
+//
+////        window?.rootViewController = navigationController
+////        navigationController.popToRootViewController(animated: false)
+//
+//        self.window?.backgroundColor = UIColor.white
+//
+//        self.window?.makeKeyAndVisible()
 
-        window?.makeKeyAndVisible()
-        window?.backgroundColor = UIColor.white
         return true
     }
+
+//    func showModalAuth(){
+//        print("In showModal")
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//
+//
+//        let authViewController = storyboard.instantiateViewController(withIdentifier: "AuthViewController") as! AuthViewController
+//
+////        self.present(newvc, animated: true)
+//        self.window?.rootViewController = authViewController
+//        
+//    }
+//    
+//    func showMain(){
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//
+//
+//        let main = storyboard.instantiateViewController(withIdentifier: "mainViewController") as! MainViewController
+//
+//        self.window?.rootViewController = main
+////        self.present(newvc, animated: true)
+//        
+//    }
 
     // MARK: UISceneSession Lifecycle
 

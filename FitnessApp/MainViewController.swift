@@ -6,10 +6,12 @@
 //
 
 import UIKit
+import Firebase
 
 class MainViewController: UIViewController {
 
     
+    @IBOutlet weak var greetingLabel: UILabel!
     @IBOutlet weak var spacerView: UIView!
     @IBOutlet weak var buttonGoPushUps: UIButton!
     @IBOutlet weak var buttonGoSitUps: UIButton!
@@ -48,16 +50,14 @@ class MainViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
+        
+        greetingLabel.text = "Привет, " + (Auth.auth().currentUser?.email ?? "Name")
+        
 //        circularprogress.percent = 13.0
 //        circularprogress.lineColor = UIColor.blue
 //        circularprogress.backgroundLineWidth = 20.0
 //        circularprogress.lineWidth = 20.0
 //        circularprogress.animateCircle(duration: 0.1)
-
-        
-        
-        
-        
         
     }
     
@@ -66,5 +66,14 @@ class MainViewController: UIViewController {
         
     }
     
+    
+    @IBAction func logoutAction(_ sender: Any) {
+        do {
+            try Auth.auth().signOut()
 
+        } catch {
+            print(error)
+        }
+    }
+    
 }

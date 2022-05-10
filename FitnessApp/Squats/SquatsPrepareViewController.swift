@@ -11,4 +11,13 @@ import UIKit
 
 class SquatsPrepareViewController: UIViewController {
     
+    
+    @IBOutlet weak var startSquatsButton: UIButton!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        startSquatsButton.layer.cornerRadius = 5.0
+        
+    }
+    
 }

@@ -12,6 +12,11 @@ class PullUpsViewController: UIViewController {
 
     @IBOutlet weak var finishPullUpsButton: UIButton!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        finishPullUpsButton.layer.cornerRadius = 5.0
+    }
+    
     // MARK: Training finished
      @IBAction func touchedFinishPullUpsButton(_ sender: Any) {
          let alert = UIAlertController(title: "Закончить тренировку?",

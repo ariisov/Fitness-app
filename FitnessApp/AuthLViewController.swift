@@ -1,26 +1,19 @@
 //
-//  SitUpsPrepareViewController.swift
+//  AuthLoginViewController.swift
 //  FitnessApp
 //
-//  Created by Булат Хатмуллин on 18.03.2022.
+//  Created by Булат Хатмуллин on 08.05.2022.
 //
 
 import UIKit
 
-class SitUpsPrepareViewController: UIViewController {
+class AuthLViewController: UIViewController {
 
-    
-    @IBOutlet weak var startSitUpsButton: UIButton!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        startSitUpsButton.layer.cornerRadius = 5.0
-        
-        self.title = "Важная информация"
         // Do any additional setup after loading the view.
     }
-    
     
 
     /*

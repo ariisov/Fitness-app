@@ -6,19 +6,60 @@
 //
 
 import UIKit
+import Firebase
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
+    var navigationController = UINavigationController()
+    
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
+        
+
+        FirebaseApp.configure()
+        Auth.auth().addStateDidChangeListener { auth, user in
+            if (user == nil) {
+                print("In auth")
+                self.showModalAuth()
+                print("In auth 2")
+            }
+            else{
+                self.showMain()
+            }
+        }
+        
+        self.window?.makeKeyAndVisible()
+     
     }
 
+    func showModalAuth(){
+        print("In showModal")
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+
+
+        let authViewController = storyboard.instantiateViewController(withIdentifier: "AuthViewController") as! AuthViewController
+//        self.navigationController = UINavigationController(rootViewController: authViewController)
+//        self.present(newvc, animated: true)
+        self.window?.rootViewController = authViewController
+        
+    }
+    
+    func showMain(){
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+
+
+        let main = storyboard.instantiateViewController(withIdentifier: "mainViewController") as! MainViewController
+        self.navigationController = UINavigationController(rootViewController: main)
+        self.window?.rootViewController = navigationController
+//        self.present(newvc, animated: true)
+        
+    }
+    
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
         // This occurs shortly after the scene enters the background, or when its session is discarded.

@@ -12,7 +12,6 @@
 		9E74ADF328074F560085C939 /* CircularView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E74ADF228074F560085C939 /* CircularView.swift */; };
 		9E8D482127D79CA50098C813 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8D482027D79CA50098C813 /* AppDelegate.swift */; };
 		9E8D482327D79CA50098C813 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8D482227D79CA50098C813 /* SceneDelegate.swift */; };
-		9E8D482527D79CA50098C813 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8D482427D79CA50098C813 /* ViewController.swift */; };
 		9E8D482827D79CA50098C813 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E8D482627D79CA50098C813 /* Main.storyboard */; };
 		9E8D482B27D79CA50098C813 /* FitnessApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9E8D482927D79CA50098C813 /* FitnessApp.xcdatamodeld */; };
 		9E8D482D27D79CA60098C813 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E8D482C27D79CA60098C813 /* Assets.xcassets */; };
@@ -23,6 +22,11 @@
 		9E997558281EADC200E4F63B /* PullUpsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E997557281EADC200E4F63B /* PullUpsViewController.swift */; };
 		9E99755A281EADDF00E4F63B /* PullUpsPrepareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E997559281EADDF00E4F63B /* PullUpsPrepareViewController.swift */; };
 		9E99755C281EADF300E4F63B /* PullUpsDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E99755B281EADF300E4F63B /* PullUpsDataManager.swift */; };
+		9E9975602825558A00E4F63B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9E99755F2825558A00E4F63B /* GoogleService-Info.plist */; };
+		9E9975632825649200E4F63B /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 9E9975622825649200E4F63B /* FirebaseAuth */; };
+		9E9975652825649200E4F63B /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 9E9975642825649200E4F63B /* FirebaseDatabase */; };
+		9E9975672826984000E4F63B /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9975662826984000E4F63B /* AuthViewController.swift */; };
+		9E9975692826A99200E4F63B /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9975682826A99200E4F63B /* WelcomeViewController.swift */; };
 		9EB6422427F5F6C7007654B8 /* RunViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB6422327F5F6C7007654B8 /* RunViewController.swift */; };
 		9EB6422627F5F6EC007654B8 /* RunPrepareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB6422527F5F6EC007654B8 /* RunPrepareViewController.swift */; };
 		9EB6422827F5F701007654B8 /* RunDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB6422727F5F701007654B8 /* RunDataManager.swift */; };
@@ -38,9 +42,8 @@
 		9E41768827E61C8D0098047D /* SitUpsDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitUpsDataManager.swift; sourceTree = "<group>"; };
 		9E74ADF228074F560085C939 /* CircularView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularView.swift; sourceTree = "<group>"; };
 		9E8D481D27D79CA50098C813 /* FitnessApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitnessApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		9E8D482027D79CA50098C813 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9E8D482027D79CA50098C813 /* AppDelegate.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9E8D482227D79CA50098C813 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9E8D482427D79CA50098C813 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9E8D482727D79CA50098C813 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9E8D482A27D79CA50098C813 /* FitnessApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FitnessApp.xcdatamodel; sourceTree = "<group>"; };
 		9E8D482C27D79CA60098C813 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -52,6 +55,9 @@
 		9E997557281EADC200E4F63B /* PullUpsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullUpsViewController.swift; sourceTree = "<group>"; };
 		9E997559281EADDF00E4F63B /* PullUpsPrepareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullUpsPrepareViewController.swift; sourceTree = "<group>"; };
 		9E99755B281EADF300E4F63B /* PullUpsDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullUpsDataManager.swift; sourceTree = "<group>"; };
+		9E99755F2825558A00E4F63B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9E9975662826984000E4F63B /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		9E9975682826A99200E4F63B /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		9EB6422327F5F6C7007654B8 /* RunViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunViewController.swift; sourceTree = "<group>"; };
 		9EB6422527F5F6EC007654B8 /* RunPrepareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunPrepareViewController.swift; sourceTree = "<group>"; };
 		9EB6422727F5F701007654B8 /* RunDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunDataManager.swift; sourceTree = "<group>"; };
@@ -67,6 +73,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E9975652825649200E4F63B /* FirebaseDatabase in Frameworks */,
+				9E9975632825649200E4F63B /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,15 +123,16 @@
 			children = (
 				9E8D482027D79CA50098C813 /* AppDelegate.swift */,
 				9E8D482227D79CA50098C813 /* SceneDelegate.swift */,
-				9E8D482427D79CA50098C813 /* ViewController.swift */,
-				9E74ADF228074F560085C939 /* CircularView.swift */,
 				9EE4007D27E38817001D161F /* MainViewController.swift */,
+				9E9975662826984000E4F63B /* AuthViewController.swift */,
 				9E41768227E612920098047D /* PushUps */,
 				9E41768327E612A40098047D /* SitUps */,
 				9E997554281EAD4C00E4F63B /* Squats */,
 				9E99755E281EAE2900E4F63B /* PullUps */,
 				9EB6422A27F5F71F007654B8 /* Run */,
+				9E9975682826A99200E4F63B /* WelcomeViewController.swift */,
 				9E8D482627D79CA50098C813 /* Main.storyboard */,
+				9E99755F2825558A00E4F63B /* GoogleService-Info.plist */,
 				9E8D482C27D79CA60098C813 /* Assets.xcassets */,
 				9E8D482E27D79CA60098C813 /* LaunchScreen.storyboard */,
 				9E8D483127D79CA60098C813 /* Info.plist */,
@@ -155,6 +164,7 @@
 		9EB6422A27F5F71F007654B8 /* Run */ = {
 			isa = PBXGroup;
 			children = (
+				9E74ADF228074F560085C939 /* CircularView.swift */,
 				9EB6422727F5F701007654B8 /* RunDataManager.swift */,
 				9EB6422527F5F6EC007654B8 /* RunPrepareViewController.swift */,
 				9EB6422327F5F6C7007654B8 /* RunViewController.swift */,
@@ -178,6 +188,10 @@
 			dependencies = (
 			);
 			name = FitnessApp;
+			packageProductDependencies = (
+				9E9975622825649200E4F63B /* FirebaseAuth */,
+				9E9975642825649200E4F63B /* FirebaseDatabase */,
+			);
 			productName = FitnessApp;
 			productReference = 9E8D481D27D79CA50098C813 /* FitnessApp.app */;
 			productType = "com.apple.product-type.application";
@@ -206,6 +220,9 @@
 				Base,
 			);
 			mainGroup = 9E8D481427D79CA50098C813;
+			packageReferences = (
+				9E9975612825649200E4F63B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 9E8D481E27D79CA50098C813 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -221,6 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E8D483027D79CA60098C813 /* LaunchScreen.storyboard in Resources */,
+				9E9975602825558A00E4F63B /* GoogleService-Info.plist in Resources */,
 				9E8D482D27D79CA60098C813 /* Assets.xcassets in Resources */,
 				9E8D482827D79CA50098C813 /* Main.storyboard in Resources */,
 			);
@@ -233,14 +251,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E9975672826984000E4F63B /* AuthViewController.swift in Sources */,
 				9E74ADF328074F560085C939 /* CircularView.swift in Sources */,
 				9E8D482B27D79CA50098C813 /* FitnessApp.xcdatamodeld in Sources */,
 				9EB6422827F5F701007654B8 /* RunDataManager.swift in Sources */,
 				9ED54F3027E4A6DF0077057E /* SitUpsViewController.swift in Sources */,
+				9E9975692826A99200E4F63B /* WelcomeViewController.swift in Sources */,
 				9E99755A281EADDF00E4F63B /* PullUpsPrepareViewController.swift in Sources */,
 				9E99755C281EADF300E4F63B /* PullUpsDataManager.swift in Sources */,
 				9E997556281EADA400E4F63B /* SquatsDataManager.swift in Sources */,
-				9E8D482527D79CA50098C813 /* ViewController.swift in Sources */,
 				9E997551281EAD0D00E4F63B /* SquatsViewController.swift in Sources */,
 				9E41768927E61C8D0098047D /* SitUpsDataManager.swift in Sources */,
 				9E8D482127D79CA50098C813 /* AppDelegate.swift in Sources */,
@@ -411,7 +430,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -441,7 +460,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -477,6 +496,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9E9975612825649200E4F63B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = exactVersion;
+				version = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9E9975622825649200E4F63B /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9E9975612825649200E4F63B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		9E9975642825649200E4F63B /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9E9975612825649200E4F63B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		9E8D482927D79CA50098C813 /* FitnessApp.xcdatamodeld */ = {

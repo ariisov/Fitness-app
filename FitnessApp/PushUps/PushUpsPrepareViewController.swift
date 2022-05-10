@@ -12,10 +12,13 @@ class PushUpsPrepareViewController: UIViewController {
  
     
     @IBOutlet weak var NavigationBarItem: UINavigationItem!
+
     
+    @IBOutlet weak var startTrainingButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 //        NavigationBarItem.hidesBackButton = UIColor(red: 255, green: 151, blue: 0, alpha: 1)
+        startTrainingButton.layer.cornerRadius = 5.0
         NavigationBarItem.backBarButtonItem?.tintColor = UIColor(red: 255, green: 151, blue: 0, alpha: 1)
         
         title = "Важная информация"
