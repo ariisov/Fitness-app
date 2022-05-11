@@ -160,7 +160,6 @@
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title=""/>
                                         <connections>
-                                            <action selector="touchedPUButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ao0-Bp-UHu"/>
                                             <segue destination="gd2-zY-fqx" kind="show" id="8qo-WI-twz"/>
                                         </connections>
                                     </button>
@@ -212,7 +211,7 @@
                                         <nil key="highlightedColor"/>
                                         <size key="shadowOffset" width="0.0" height="0.0"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Привет, Username!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EQa-Qo-fRq">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EQa-Qo-fRq">
                                         <rect key="frame" x="0.0" y="8" width="333" height="67"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                         <nil key="textColor"/>
@@ -228,7 +227,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="110" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O6K-n1-pHx">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O6K-n1-pHx">
                                         <rect key="frame" x="109" y="154" width="114" height="42"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                         <color key="textColor" red="0.0" green="0.16361763460000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -240,7 +239,7 @@
                                         <color key="textColor" red="0.0" green="0.16361763460000001" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="45" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LlG-PG-OkE">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LlG-PG-OkE">
                                         <rect key="frame" x="5" y="149" width="57" height="50"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                         <color key="textColor" red="0.0" green="0.16361763460000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -258,7 +257,7 @@
                                         <color key="textColor" red="0.0" green="0.16361763460000001" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="2000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g0i-DE-b2h">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g0i-DE-b2h">
                                         <rect key="frame" x="253" y="153" width="83" height="42"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                         <color key="textColor" red="0.0" green="0.16361763460000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -368,10 +367,10 @@
                         <outlet property="buttonGoSitUps" destination="Uzb-Mn-LaK" id="Hoj-of-RL1"/>
                         <outlet property="buttonGoSquats" destination="Q0i-XM-1ry" id="0Mn-jR-QTz"/>
                         <outlet property="greetingLabel" destination="EQa-Qo-fRq" id="unA-FL-tt6"/>
-                        <outlet property="labelTotalNumberOfExercises" destination="O6K-n1-pHx" id="cbj-fz-s5U"/>
+                        <outlet property="labelTotalNumberOfExercises" destination="O6K-n1-pHx" id="o7T-xP-QNI"/>
+                        <outlet property="labelTotalNumberOfKcal" destination="g0i-DE-b2h" id="ssJ-KP-tmH"/>
                         <outlet property="labelTotalNumberOfMinutes" destination="LlG-PG-OkE" id="iRN-gk-9gI"/>
                         <outlet property="spacerView" destination="2Sp-7i-noX" id="JQO-6v-HJE"/>
-                        <outlet property="totalNumberOfCcals" destination="g0i-DE-b2h" id="dOy-co-rd7"/>
                         <outlet property="trainsLabel" destination="DKh-Lf-BsL" id="FHt-y4-M8e"/>
                     </connections>
                 </viewController>

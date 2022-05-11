@@ -1,6 +1,8 @@
 import UIKit
+
 class PushUpsViewController: UIViewController {
 
+    let pushUpsDataManager = PushUpsDataManager()
     @IBOutlet weak var pushUpsShowButton: UIButton!
     @IBOutlet weak var finishPushUpsButton: UIButton!
     @IBOutlet weak var timerLabel: UILabel!
@@ -50,6 +52,9 @@ class PushUpsViewController: UIViewController {
                                       message: "При согласии ваша тренировка будет окончена",
                                       preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Да", style: .default, handler: {_ in
+            let exerciseMinute = (self.count / 600) + ((self.count / 600) % 10)
+            let exerciseSeconds = ((self.count / 100) % 6) * 10 + ((self.count / 10) % 10)
+            self.pushUpsDataManager.savingResult(didMinutes: exerciseMinute, didSeconds: exerciseSeconds)
             self.navigationController?.popToRootViewController(animated: true)
         }))
         

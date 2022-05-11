@@ -7,6 +7,7 @@
 
 import UIKit
 import Firebase
+import FirebaseFirestore
 
 class MainViewController: UIViewController {
 
@@ -19,17 +20,18 @@ class MainViewController: UIViewController {
     @IBOutlet weak var buttonGoPullUps: UIButton!
 
 
-    @IBOutlet weak var labelTotalNumberOfExercises: UILabel!
+    @IBOutlet weak var labelTotalNumberOfKcal: UILabel!
     @IBOutlet weak var labelTotalNumberOfMinutes: UILabel!
-    @IBOutlet weak var totalNumberOfCcals: UILabel!
+    @IBOutlet weak var labelTotalNumberOfExercises: UILabel!
     @IBOutlet weak var trainsLabel: UILabel!
     
-    var circularprogress = CircularView(frame: CGRect(x: 0, y: 0, width: 108, height: 108))
+//    var circularprogress = CircularView(frame: CGRect(x: 0, y: 0, width: 108, height: 108))
 
-    var radiusCorners = 30.0
+    var didSetData = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.spacerView.backgroundColor = UIColor.white
         
         let buttons: [UIButton] = [buttonGoPushUps,
@@ -44,14 +46,46 @@ class MainViewController: UIViewController {
             button.layer.shadowOpacity = 0.3
         }
         
+        let db = Firestore.firestore()
+        db.collection("users").whereField("uid", isEqualTo: Auth.auth().currentUser?.uid).getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in querySnapshot!.documents {
+                    let userData = document.data()
+                    self.greetingLabel.isHidden = false
+                    
+                    let name = userData["name"] as? String ?? ""
+                    self.greetingLabel.text = "Привет, \(name)!"
+                    
+                    let totalNumberOfMinutes = userData["totalMinutes"] as? String ?? ""
+                    let totalNumberOfSeconds = userData["totalSeconds"] as? String ?? ""
+
+                    var intNumberOfMinutes = Int(totalNumberOfMinutes) ?? 0
+                    let intNumberOfSeconds = Int(totalNumberOfSeconds) ?? 0
+                    intNumberOfMinutes = intNumberOfMinutes + (intNumberOfSeconds/60)
+
+                    self.labelTotalNumberOfMinutes.text = String(intNumberOfMinutes)
+                    
+                    self.labelTotalNumberOfKcal.text = userData["totalKcal"] as? String ?? ""
+                    
+                    self.labelTotalNumberOfExercises.text = userData["totalExercises"] as? String ?? ""
+                }
+            }
+        }
+        
+        didSetData = true
+        
     }
     
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
+        if !didSetData{
+            setHeadData()
+        }
         
-        greetingLabel.text = "Привет, " + (Auth.auth().currentUser?.email ?? "Name")
         
 //        circularprogress.percent = 13.0
 //        circularprogress.lineColor = UIColor.blue
@@ -61,11 +95,39 @@ class MainViewController: UIViewController {
         
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        didSetData = false
+    }
+
     
-    @IBAction func touchedPUButton(_ sender: Any) {
+    func setHeadData(){
+        
+        let db = Firestore.firestore()
+        db.collection("users").whereField("uid", isEqualTo: Auth.auth().currentUser?.uid).getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in querySnapshot!.documents {
+                    let userData = document.data()
+                    
+                    let totalNumberOfMinutes = userData["totalMinutes"] as? String ?? ""
+                    let totalNumberOfSeconds = userData["totalSeconds"] as? String ?? ""
+
+                    var intNumberOfMinutes = Int(totalNumberOfMinutes) ?? 0
+                    let intNumberOfSeconds = Int(totalNumberOfSeconds) ?? 0
+                    intNumberOfMinutes = intNumberOfMinutes + (intNumberOfSeconds/60)
+
+                    self.labelTotalNumberOfMinutes.text = String(intNumberOfMinutes)
+                    
+                    self.labelTotalNumberOfKcal.text = userData["totalKcal"] as? String ?? ""
+                    
+                    self.labelTotalNumberOfExercises.text = userData["totalExercises"] as? String ?? ""
+                }
+            }
+        }
         
     }
-    
     
     @IBAction func logoutAction(_ sender: Any) {
         do {

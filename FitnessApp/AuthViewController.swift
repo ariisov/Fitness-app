@@ -7,11 +7,10 @@
 
 import UIKit
 import Firebase
+import FirebaseFirestore
 
 class AuthViewController: UIViewController {
 
-    
-    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
@@ -67,12 +66,27 @@ extension AuthViewController:UITextFieldDelegate{
         
         if signup {
             if (!name.isEmpty && !email.isEmpty && !password.isEmpty){
-                Auth.auth().createUser(withEmail: email, password: password) { result, error in
+                Auth.auth().createUser(withEmail: email, password: password) {
+                    result, error in
                     if error == nil{
                         if let result = result{
-                            print(result.user.uid)
-                            let ref = Database.database().reference().child("users")
-                            ref.child(result.user.uid).updateChildValues(["name" : name, "email" : email])
+                            print(result.user.uid)                           
+                            let db = Firestore.firestore()
+                            db.collection("users").addDocument(data: [
+                                "uid": result.user.uid,
+                                "name": name,
+                                "email": email,
+                                "totalKcal": "0",
+                                "totalExercises": "0",
+                                "totalMinutes": "0",
+                                "totalSeconds": "0"
+                            ]) { error in
+                                if error != nil {
+                                    fatalError("Error saving user in database")
+                                }
+                            }
+                            
+                            
                             self.dismiss(animated: true)
                         }
                     }
@@ -93,10 +107,6 @@ extension AuthViewController:UITextFieldDelegate{
                 showAlert()
             }
         }
-        
-        
-        
         return true
-        
     }
 }
