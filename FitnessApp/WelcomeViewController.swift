@@ -21,21 +21,7 @@ class WelcomeViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
-        
-//        Auth.auth().addStateDidChangeListener { auth, user in
-//            if (user != nil) {
-//                print("In auth")
-//                self.showModalAuth()
-//                print("In auth 2")
-//            }
-//            else {
-//                self.showMain()
-//            }
-//        }
-//        
-//        navigationController?.popToRootViewController(animated: true)
-//        
+
     }
     
     func showModalAuth(){
@@ -43,14 +29,7 @@ class WelcomeViewController: UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
 
 
-        let authViewController = storyboard.instantiateViewController(withIdentifier: "AuthViewController") as! AuthViewController
 
-//        self.present(newvc, animated: true)
-        
-        
-        
-        
-        
     }
     
     

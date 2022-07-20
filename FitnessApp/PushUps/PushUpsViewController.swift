@@ -2,14 +2,13 @@ import UIKit
 
 class PushUpsViewController: UIViewController {
 
-    let pushUpsDataManager = PushUpsDataManager()
+    private let pushUpsDataManager = PushUpsDataManager()
     @IBOutlet weak var pushUpsShowButton: UIButton!
     @IBOutlet weak var finishPushUpsButton: UIButton!
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var counterLabel: UILabel!
     private var timer = Timer()
     private var count = 0
-    private var datamanager: PushUpsDataManager = PushUpsDataManager()
     private var firstPushUp = true
     
     // MARK: View Did Load
@@ -22,7 +21,7 @@ class PushUpsViewController: UIViewController {
 
     // MARK: Push Up button touched
     @IBAction func touchedPushUpButton(_ sender: Any) {
-        counterLabel?.text = datamanager.obtainNumberOfPU()
+        counterLabel?.text = pushUpsDataManager.obtainNumberOfPU()
         switch (firstPushUp) {
         case false: break
         case true:
@@ -33,18 +32,21 @@ class PushUpsViewController: UIViewController {
             firstPushUp = false
         }
     }
+    
+    
     @objc private func timeUpdating() {
         
         let tensMinutes = String((count / 600) / 10)
         let onesMinutes = String((count / 600) % 10)
         let tensSeconds = String((count / 100) % 6)
         let onesSeconds = String((count / 10) % 10)
-        let miliseconds = String((count % 10))
+        let deciseconds = String((count % 10))
 
         timerLabel.text = tensMinutes + onesMinutes  + ":" + tensSeconds +
-        onesSeconds + ":" + miliseconds + "0"
+        onesSeconds + ":" + deciseconds + "0"
         count += 1
     }
+    
    // MARK: Training finished
     @IBAction func touchedFinishPUButton(_ sender: Any) {
         timer.invalidate()
@@ -69,9 +71,3 @@ class PushUpsViewController: UIViewController {
         self.present(alert, animated: true)
     }
 }
-
-
-
-
-
-

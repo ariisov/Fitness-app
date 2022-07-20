@@ -14,7 +14,13 @@ class SquatsViewController: UIViewController {
     
     
     @IBOutlet weak var counterLabelSquats: UILabel!
-    
+    private let squatsDataManager = SquatsDataManager()
+    private var firstSquat = true
+    private var timerForShowing = Timer()
+    private var count = 0
+    private var didSquatFlag = false
+
+
     let motion = CMMotionManager()
     var timer = Timer()
 
@@ -33,17 +39,44 @@ class SquatsViewController: UIViewController {
             self.counterLabelSquats.transform = CGAffineTransform(rotationAngle: .pi / 2 )
             self.counterLabelSquats.text = "0"
         }){
-            _ in self.startAccelerometers()
+            _ in self.startShowingTimer()
         }
         
         
 
     }
     
+    func startShowingTimer(){
+
+        startAccelerometers()
+
+        startTimer()
+    }
+    
+    func startTimer(){
+
+        switch (self.firstSquat) {
+        case false: break
+        case true:
+            print ("Timer activated")
+            self.timerForShowing = Timer.scheduledTimer(timeInterval: 0.1,
+                                         target: self,
+                                        selector: #selector(self.timeUpdating),
+                                         userInfo: nil, repeats: true)
+            self.firstSquat = false
+        }
+        
+    }
+
+    @objc private func timeUpdating() {
+
+        count += 1
+    }
+    
     func startAccelerometers() {
        // Make sure the accelerometer hardware is available.
        if self.motion.isAccelerometerAvailable {
-          self.motion.accelerometerUpdateInterval = 1.0
+          self.motion.accelerometerUpdateInterval = 0.1
           self.motion.startAccelerometerUpdates()
 
           // Configure a timer to fetch the data.
@@ -52,7 +85,17 @@ class SquatsViewController: UIViewController {
              // Get the accelerometer data.
              if let data = self.motion.accelerometerData {
                 let x = data.acceleration.x
-                 
+                 if x < 0.0 {
+                     if self.didSquatFlag == true{
+                         
+                         self.printCounterSquats()
+                         self.didSquatFlag = false
+                         self.pauseAccelerometer()
+                     }
+                 }
+                 if x > 0 {
+                     self.didSquatFlag = true
+                 }
                  print(x)
              }
           })
@@ -62,7 +105,16 @@ class SquatsViewController: UIViewController {
        }
     }
     
-    
+    func pauseAccelerometer(){
+        timer.invalidate()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            self.startAccelerometers()
+        }
+    }
+
+    func printCounterSquats (){
+        counterLabelSquats?.text = squatsDataManager.obtainNumberOfSquats()
+    }
     
     // MARK: Training finished
      @IBAction func touchedFinishSquatsButton(_ sender: Any) {
@@ -71,6 +123,9 @@ class SquatsViewController: UIViewController {
                                        preferredStyle: .alert)
          alert.addAction(UIAlertAction(title: "Да", style: .default, handler: {_ in
              self.timer.invalidate()
+             let exerciseMinute = (self.count / 600) + ((self.count / 600) % 10)
+             let exerciseSeconds = ((self.count / 100) % 6) * 10 + ((self.count / 10) % 10)
+             self.squatsDataManager.savingResult(didMinutes: exerciseMinute, didSeconds: exerciseSeconds)
              self.navigationController?.popToRootViewController(animated: true)
          }))
          

@@ -13,8 +13,12 @@ class PushUpsPrepareViewController: UIViewController {
     
     @IBOutlet weak var NavigationBarItem: UINavigationItem!
 
-    
+
     @IBOutlet weak var startTrainingButton: UIButton!
+    
+    
+    @IBOutlet weak var descriptionText: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 //        NavigationBarItem.hidesBackButton = UIColor(red: 255, green: 151, blue: 0, alpha: 1)
@@ -23,8 +27,7 @@ class PushUpsPrepareViewController: UIViewController {
         
         title = "Важная информация"
         
-        
-        
+        descriptionText.text = " Положите телефон так, чтобы при сгибании рук, можно было коснуться экрана кончиком носа. \r\n Повторение считается выполненным, если вы коснетесь экрана.\r\n В исходном положении руки выпрямлены и удерживают вес всего тела. Аккуратно, сохраняя прямое положение тела, постепенно опускайтесь грудью к полу, сгибая локти."
     }
     
 

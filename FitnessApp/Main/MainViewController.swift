@@ -11,7 +11,6 @@ import FirebaseFirestore
 
 class MainViewController: UIViewController {
 
-    
     @IBOutlet weak var greetingLabel: UILabel!
     @IBOutlet weak var spacerView: UIView!
     @IBOutlet weak var buttonGoPushUps: UIButton!
@@ -19,16 +18,13 @@ class MainViewController: UIViewController {
     @IBOutlet weak var buttonGoSquats: UIButton!
     @IBOutlet weak var buttonGoPullUps: UIButton!
 
-
     @IBOutlet weak var labelTotalNumberOfKcal: UILabel!
     @IBOutlet weak var labelTotalNumberOfMinutes: UILabel!
     @IBOutlet weak var labelTotalNumberOfExercises: UILabel!
     @IBOutlet weak var trainsLabel: UILabel!
     
-//    var circularprogress = CircularView(frame: CGRect(x: 0, y: 0, width: 108, height: 108))
-
-    var didSetData = false
-    
+    private var didSetData = false
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -46,6 +42,17 @@ class MainViewController: UIViewController {
             button.layer.shadowOpacity = 0.3
         }
         
+        self.greetingLabel.isHidden = false
+
+//        let name = dataManager.getUserName()
+//        self.greetingLabel.text = "Привет, \(name)!"
+//        let totalMinutes = dataManager.getUserTime()
+//        self.labelTotalNumberOfMinutes.text = totalMinutes
+//        let totalExercises = dataManager.getUserExecises()
+//        self.labelTotalNumberOfExercises.text = totalExercises
+//        let totalKcal = dataManager.getUserKcal()
+//        self.labelTotalNumberOfKcal.text = totalKcal
+        
         let db = Firestore.firestore()
         db.collection("users").whereField("uid", isEqualTo: Auth.auth().currentUser?.uid).getDocuments() { (querySnapshot, err) in
             if let err = err {
@@ -53,26 +60,23 @@ class MainViewController: UIViewController {
             } else {
                 for document in querySnapshot!.documents {
                     let userData = document.data()
-                    self.greetingLabel.isHidden = false
                     
                     let name = userData["name"] as? String ?? ""
                     self.greetingLabel.text = "Привет, \(name)!"
-                    
                     let totalNumberOfMinutes = userData["totalMinutes"] as? String ?? ""
                     let totalNumberOfSeconds = userData["totalSeconds"] as? String ?? ""
-
                     var intNumberOfMinutes = Int(totalNumberOfMinutes) ?? 0
                     let intNumberOfSeconds = Int(totalNumberOfSeconds) ?? 0
                     intNumberOfMinutes = intNumberOfMinutes + (intNumberOfSeconds/60)
-
                     self.labelTotalNumberOfMinutes.text = String(intNumberOfMinutes)
-                    
-                    self.labelTotalNumberOfKcal.text = userData["totalKcal"] as? String ?? ""
-                    
-                    self.labelTotalNumberOfExercises.text = userData["totalExercises"] as? String ?? ""
+                    let totalExercises = userData["totalExercises"] as? String ?? ""
+                    self.labelTotalNumberOfExercises.text = totalExercises
+                    let totalKcal = userData["totalKcal"] as? String ?? ""
+                    self.labelTotalNumberOfKcal.text = totalKcal
                 }
             }
         }
+        
         
         didSetData = true
         
@@ -86,14 +90,9 @@ class MainViewController: UIViewController {
             setHeadData()
         }
         
-        
-//        circularprogress.percent = 13.0
-//        circularprogress.lineColor = UIColor.blue
-//        circularprogress.backgroundLineWidth = 20.0
-//        circularprogress.lineWidth = 20.0
-//        circularprogress.animateCircle(duration: 0.1)
-        
     }
+    
+
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)

@@ -18,7 +18,7 @@ class AuthViewController: UIViewController {
     
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var enterButton: UIButton!
-    var signup: Bool = true{
+    private var signup: Bool = true{
         willSet{
             if newValue{
                 titleLabel.text = "Регистрация"
@@ -70,12 +70,10 @@ extension AuthViewController:UITextFieldDelegate{
                     result, error in
                     if error == nil{
                         if let result = result{
-                            print(result.user.uid)                           
                             let db = Firestore.firestore()
-                            db.collection("users").addDocument(data: [
+                            db.collection("users").document(result.user.uid).setData([
                                 "uid": result.user.uid,
                                 "name": name,
-                                "email": email,
                                 "totalKcal": "0",
                                 "totalExercises": "0",
                                 "totalMinutes": "0",
